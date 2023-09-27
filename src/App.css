@@ -1,6 +1,23 @@
 .App {
   text-align: center;
 }
+/* CSS info for google fonts */
+/* font-family: 'Inter', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+/* styles.css */
+/* .custom-background {
+  background-color: pink;
+} */
+.MuiPaper-root {
+  background-color: #1185CB !important;
+  color: #fff !important;
+}
+
+.MuiToolbar-root {
+  background-color: #fff !important;
+  color: black !important;
+}
 
 .App-logo {
   height: 40vmin;

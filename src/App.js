@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+
+import PermanentDrawerLeft from "./components/sidebar/sidebar";
+
+// To override the default styling use below
+const theme = createTheme({
+  typography: {
+    fontFamily: ["Poppins"].join(","),
+    fontWeightLight: "300",
+    fontWeightRegular: "400",
+    fontWeightBold: "500",
+  },
+  palette: {
+    mode: "light",
+    primary: {
+      main: "#fff",
+    },
+    // secondary: {
+    //   main: "#1185CB",
+    // },
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={theme}>
+
+          <PermanentDrawerLeft />
+
+      </ThemeProvider>
+    </>
   );
 }
 
